@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -fr .shadow-cljs/
+npx shadow-cljs watch app

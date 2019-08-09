@@ -1,6 +1,12 @@
 (ns txt2code.core
   (:require [reagent.core :as reagent :refer [atom]]))
 
+(def blockly (js* "Blockly"))
+(def blockly-js (js* "Blockly.JavaScript"))
+(def blockly-events (js* "Blockly.Events"))
+(def blockly-xml (js* "Blockly.Xml"))
+(def blockly-blocks (js* "Blockly.Blocks"))
+
 ;; define your app data so that it doesn't get over-written on reload
 
 (defonce app-state (atom {:text "Hello world!"}))

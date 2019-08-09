@@ -3,10 +3,17 @@
  ["src"]
 
  :dependencies [[binaryage/devtools "0.9.7"]
-                [reagent "0.8.0-alpha2"]]
+                [cider/cider-nrepl "0.21.1"]
+                [org.clojure/core.async  "0.4.500"]
+                [reagent "0.8.1"]
+                [re-frame "0.10.8"]
+                [clj-commons/secretary "1.2.4"]
+                [markdown-clj "1.10.0"]
+                [cljs-http "0.1.46"]
+                [alandipert/storage-atom "2.0.1"]]
 
  ;; set an nrepl port for connection to a REPL.
- :nrepl        {:port 8777}
+ :nrepl        {:port 8766}
 
  :builds
  {:app {:target :browser
@@ -24,6 +31,6 @@
          :after-load txt2code.core/start
          ;; serve the public directory over http at port 8700
          :http-root    "public"
-         :http-port    8700
+         :http-port    8788
          :preloads     [devtools.preload]}
         }}}
