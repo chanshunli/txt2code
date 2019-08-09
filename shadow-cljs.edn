@@ -26,7 +26,7 @@
 
         :devtools
         ;; before live-reloading any code call this function
-        {:before-load txt2code.core/stop
+        {:before-load txt2code.core/stop ;; 开发保存之后会调用的方法
          ;; after live-reloading finishes call this function
          :after-load txt2code.core/start
          ;; serve the public directory over http at port 8700
